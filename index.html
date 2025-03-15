@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini App Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .button {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Галерея картинок</h1>
+    <div class="gallery">
+        <img src="test/black.png" alt="Image 1">
+        <img src="test/blue.png" alt="Image 2">
+        <img src="test/brown.png" alt="Image 3">
+        <img src="test/green.png" alt="Image 4">
+        <img src="test/grey.png" alt="Image 5">
+        <img src="test/mal.png" alt="Image 6">
+        <img src="test/red.png" alt="Image 7">
+        <img src="test/yellow.png" alt="Image 8">
+    </div>
+    <div class="button">
+        <button onclick="closeApp()">Закрыть</button>
+    </div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        function closeApp() {
+            Telegram.WebApp.close();
+        }
+    </script>
+</body>
+</html>
